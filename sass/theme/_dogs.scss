@@ -1,0 +1,37 @@
+/**
+ * Portfolio styles
+ */
+
+#wrapper-dogs {
+	color: $white;
+	text-align: center;
+
+	.wrapper-dog {
+		display: flex;
+
+		.dog {
+			background-color: $light;
+			color: $body-color;
+			border: 1px solid black;
+			margin-top:10px;
+			display: flex;
+			flex-direction: column;
+			padding: 1rem 1.5rem;
+
+			img {
+				margin-bottom: 0.5rem;
+			}
+			h1 {
+				font-size: 1.5rem;
+			}
+
+			main {
+				flex-grow: 1;
+			}
+			.btn {
+				background-color:blue;
+			}
+		}
+
+	}
+}

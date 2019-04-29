@@ -1,0 +1,35 @@
+/**
+ * USP styles
+ */
+
+#wrapper-usps {
+	background-color: $secondary;
+	text-align: center;
+	padding:10px;
+
+	.col-md {
+		display: flex;
+
+		.usp {
+			background-color: $light;
+			padding: 1rem 1.5rem;
+			max-width: 50%;
+			max-height:100%;
+
+			.fa {
+				color: $primary;
+				margin: 0.75rem 0;
+			}
+
+			h1 {
+				font-size: 1rem;
+			}
+
+		}
+
+		.usp-image {
+			padding-bottom:10px;
+		}
+
+	}
+}
