@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php get_template_part( 'sidebar-templates/sidebar', 'herocanvas' ); ?>
 
-		<?php get_template_part( 'sidebar-templates/sidebar', 'statichero' ); ?>
+		
 
 	</div>
 
