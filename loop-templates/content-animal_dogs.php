@@ -32,15 +32,6 @@
                 }
             ?>
 
-            <div class="branch">
-                <?php
-                    the_terms(
-                        get_the_ID(),
-                        'us_portfolio_branch',
-                        __('Branch: ', 'understrap')
-                    );
-                ?>
-            </div><!-- /.branch -->
         </footer>
     </article>
 </div>

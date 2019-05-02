@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Get the three latest Portfolio Items
 $dogs = new WP_Query([
 	'post_type' => 'animal_dogs',
-	'posts_per_page' => -1,
+	'posts_per_page' => 3,
 ]);
 
 // Did we get any Portfolio Items?
@@ -31,7 +31,7 @@ if ($dogs->have_posts()) {
 							$dogs->the_post();
 							?>
 								<!-- For each Portfolio Item, include a template part? -->
-								<?php get_template_part('loop-templates/content-dog'); ?>
+								<?php get_template_part('loop-templates/content-animal_dogs'); ?>
 							<?php
 						}
 
