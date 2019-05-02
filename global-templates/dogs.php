@@ -1,6 +1,6 @@
 <?php
 /**
- * Portfolio Items setup.
+ * Dog setup.
  *
  * @package understrap
  */

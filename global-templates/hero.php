@@ -24,41 +24,14 @@ $bg_img = get_field('hero_background_image');
 
 
 <style>
-	
-</style>
-
-<!-- <style>
 
 	#hero {
-		height:500px;
-		background-size: cover;
-
+		background-size:cover;
 	}
 	 #hero > .container {
 		color:white;
-	}
-
-	#hero > .container {
 		text-align: center;
+		padding-top:20px;
+		padding-bottom: 150px
 	}
-
-	@media only screen and (max-width: 820px) {
-	#hero {  
-	    background-repeat: no-repeat;
-    	height: auto;
-    	width: auto;
-    	padding-bottom: 20px;
-    	padding-top: 15px;
-	}
-}
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)  { 
-	#hero {
-		height: 300px;
-    	background-size: cover;
-	}
-
-}
-</style> -->
+</style>

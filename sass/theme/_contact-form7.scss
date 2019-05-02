@@ -44,6 +44,8 @@
   input[type=submit] {
     @extend .btn;
     @extend .btn-outline-primary;
+    background-color:blue;
+    color:white;
   }
 
   .wpcf7-form {
