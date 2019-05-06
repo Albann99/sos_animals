@@ -22,7 +22,7 @@ if ($dogs->have_posts()) {
 		<div class="wrapper" id="wrapper-dogs">
 			<div class="container">
 
-				<h1 style="color:black;"><?php _e('Senaste Hundar', 'understrap'); ?></h1>
+				<h1 style="color:black;"><?php the_field('latest_dog_title'); ?></h1>
 
 				<div class="row">
 					<!-- Loop over the Portfolio Items -->
@@ -43,3 +43,4 @@ if ($dogs->have_posts()) {
 		</div><!-- /#wrapper-portfolio-items -->
 	<?php
 }
+

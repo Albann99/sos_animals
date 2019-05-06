@@ -1,6 +1,6 @@
 <?php
 /**
- * Single Portfolio Post partial template.
+ * Single Dog Post partial template.
  *
  * @package understrap
  */

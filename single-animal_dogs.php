@@ -30,24 +30,37 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</main><!-- #main -->
 
 			<aside class="col-md-3">
-				<?php
-					if ($client = get_post_meta(get_the_ID(), 'client', true)) {
-						printf(__('<div class="client">Client: %s</div>', 'understrap'), $client);
-					}
-				?>
-
 				<div class="dog-info">
-					<p><?php
-						the_terms($post->ID, 'animal_storlek',__('Storlek: ', 'understrap')); ?></p>
-						
-					<p><?php __('Ålder:', 'understrap'); ?> <?php the_field('alder'); ?></p>
-					<p>Kön: <?php the_field('kon'); ?></p>
-					<p>Mankhöjd: <?php the_field('mankhojd'); ?></p>
-					<p>Vikt: <?php the_field('vikt'); ?></p>
-					<?php if( get_field('adopterad') ): ?>
-					<p>Adopterad: <?php the_field('adopterad'); ?></p>
+
+					<h2>Dog info</h2>
+					<br>
+
+					<?php if(get_field('animal_storlek')): ?>
+						<p><?php the_field('storlek_dog'); ?>: <?php $storlek = get_the_term_list( $post->ID,'animal_storlek'); echo strip_tags($storlek); ?> cm </p>
+					<?php endif; ?>
+
+					<?php if(get_field('alder')): ?>
+					<p><?php the_field('alder_dog'); ?>: <?php the_field('alder'); ?></p>
+					<?php endif; ?>
+
+					<?php if(get_field('kon')): ?>
+					<p><?php the_field('kon_dog'); ?>: <?php the_field('kon'); ?></p>
+					<?php endif; ?>
+
+					<?php if(get_field('mankhojd') ): ?>
+					<p><?php the_field('mankhojd_dog'); ?>: <?php the_field('mankhojd'); ?> cm </p>
+					<?php endif; ?>
+
+					<?php if(get_field('vikt') ): ?>
+					<p><?php the_field('vikt_dog'); ?>: <?php the_field('vikt'); ?> kg </p>
+					<?php endif; ?>
+
+					<p><?php the_field('finns_i_dog'); ?>: <?php $land = get_the_term_list( $post->ID, 'animal_land'); echo strip_tags($land); ?></p>
+
+					<?php if(get_field('adopterad')): ?>
+					<p><?php the_field('adopterad_dog'); ?>: <?php the_field('adopterad'); ?></p>
           			<?php endif; ?>
-				</div><!-- /.branch -->
+          			
 			</aside>
 
 		</div><!-- .row -->
@@ -55,3 +68,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #content -->
 
 </div><!-- #single-wrapper -->
+
+<style>
+.dog-info {
+	background-color:black;
+	color:white;
+	padding:20px;
+}
+
+@media only screen and (max-width: 600px) {
+.dog-info:before {
+    content: .entry-content;
+    position: absolute;
+}
+	}
+</style>

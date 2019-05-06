@@ -98,6 +98,9 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 		// Check and setup theme default settings.
 		understrap_setup_theme_default_settings();
 
+		// Add image size for Dog Posts
+		add_image_size('dog-thumbnail', 510, 287, true);
+
 	}
 }
 

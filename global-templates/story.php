@@ -20,12 +20,15 @@ if ($story->have_posts()) {
 	// GREAT SUCCESS!
 
 	?>
-		<div class="story">
+	
+		<div class="wrapper" id="wrapper-story">
+<h1><?php the_field('success_story_title'); ?></h1>
 			<div class="container">
+				<div class="row">
 				
-					<h1 style="text-align:center;"><?php the_field('success_story_title'); ?></h1>
+					
 
-				<div class="card" style="width: 18rem;">
+				
 
 
 

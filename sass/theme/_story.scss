@@ -1,10 +1,21 @@
 /**
- * Story styles
+ * USP styles
  */
 
+#wrapper-story {
+	background-color: $secondary;
+	text-align: center;
+
+	.col-md {
+		display: flex;
+
 		.story {
-			background-color:$secondary;
-			padding-top:20px;
-			padding-bottom: 20px;
+			background-color: $light;
+
+			h1 {
+				font-size: 1.5rem;
+			}
 		}
-	
+
+	}
+}
