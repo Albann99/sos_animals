@@ -17,9 +17,12 @@ $understrap_includes = array(
 	'/template-tags.php',                   // Custom template tags for this theme.
 	'/pagination.php',                      // Custom pagination for this theme.
 	'/hooks.php',                           // Custom hooks.
-	//'/acf.php',								// Load ACF Plugin.
+	'/acf.php',								// Load ACF Plugin.
+	'/acf-fieldgroups.php', 				// Load ACF Field Groups
 	'/extras.php',                          // Custom functions that act independently of the theme templates.
 	'/customizer.php',                      // Customizer additions.
+	'/custom-post-types.php',				// Load Custom Post Type
+	'/custom-taxonomies.php',				// Load Custom Taxonomies
 	'/custom-comments.php',                 // Custom Comments file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.

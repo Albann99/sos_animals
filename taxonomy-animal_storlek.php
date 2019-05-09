@@ -34,7 +34,7 @@ if ( have_posts() ) :
  <?php
 else :
   
-  echo _e('<div class="container">There are no posts', 'understrap', '</div>');
+  echo _e('<div class="container">' 'There are no posts', 'understrap', '</div>');
  
 endif;
  
