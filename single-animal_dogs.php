@@ -36,29 +36,29 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<br>
 
 					<?php if(get_field('animal_storlek')): ?>
-						<p><?php the_field('storlek_dog'); ?>: <?php $storlek = get_the_term_list( $post->ID,'animal_storlek'); echo strip_tags($storlek); ?> cm </p>
+						<p><?php _e('Storlek:', 'understrap'); ?> <?php $storlek = get_the_term_list( $post->ID, 'animal_storlek'); echo strip_tags($storlek); ?> cm </p>
 					<?php endif; ?>
 
 					<?php if(get_field('alder')): ?>
-					<p><?php the_field('alder_dog'); ?>: <?php the_field('alder'); ?></p>
+					<p><?php _e('Ålder:', 'understrap'); ?> <?php the_field('alder'); ?></p>
 					<?php endif; ?>
 
 					<?php if(get_field('kon')): ?>
-					<p><?php the_field('kon_dog'); ?>: <?php the_field('kon'); ?></p>
+					<p><?php _e('Kön:', 'understrap'); ?> <?php the_field('kon'); ?></p>
 					<?php endif; ?>
 
 					<?php if(get_field('mankhojd') ): ?>
-					<p><?php the_field('mankhojd_dog'); ?>: <?php the_field('mankhojd'); ?> cm </p>
+					<p><?php _e('Mankhöjd:', 'understrap'); ?> <?php the_field('mankhojd'); ?> cm </p>
 					<?php endif; ?>
 
 					<?php if(get_field('vikt') ): ?>
-					<p><?php the_field('vikt_dog'); ?>: <?php the_field('vikt'); ?> kg </p>
+					<p><?php _e('Vikt:', 'understrap'); ?> <?php the_field('vikt'); ?> kg </p>
 					<?php endif; ?>
 
-					<p><?php the_field('finns_i_dog'); ?>: <?php $land = get_the_term_list( $post->ID, 'animal_land'); echo strip_tags($land); ?></p>
+					<p><?php _e('Finns i:', 'understrap'); ?> <?php $land = get_the_term_list( $post->ID, 'animal_land'); echo strip_tags($land); ?></p>
 
 					<?php if(get_field('adopterad')): ?>
-					<p><?php the_field('adopterad_dog'); ?>: <?php the_field('adopterad'); ?></p>
+					<p><?php _e('Adopterad:', 'understrap'); ?> <?php the_field('adopterad'); ?></p>
           			<?php endif; ?>
           			
 			</aside>
@@ -69,17 +69,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #single-wrapper -->
 
-<style>
-.dog-info {
-	background-color:black;
-	color:white;
-	padding:20px;
-}
 
-@media only screen and (max-width: 600px) {
-.dog-info:before {
-    content: .entry-content;
-    position: absolute;
-}
-	}
-</style>
+<?php 
+
+get_footer();

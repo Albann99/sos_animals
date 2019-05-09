@@ -19,19 +19,14 @@ $story = new WP_Query([
 if ($story->have_posts()) {
 	// GREAT SUCCESS!
 
+$bg_img = get_field('story_background_image');
 	?>
-	
-		<div class="wrapper" id="wrapper-story">
-<h1><?php the_field('success_story_title'); ?></h1>
+
+		<div class="wrapper" id="wrapper-story" style="background-image:url(<?php echo $bg_img; ?>">
+	<h1><?php the_field('success_story_title'); ?></h1>
 			<div class="container">
 				<div class="row">
 				
-					
-
-				
-
-
-
 					<!-- Loop over the Story Posts -->
 					<?php
 						while ($story->have_posts()) {

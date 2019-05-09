@@ -13,10 +13,8 @@
         <main>
             <?php the_excerpt(); ?>
         </main>
-        <div class="card-footer">
-            <small class="text-muted">
-                <?php _e('Post Created: ', 'mybasictheme'); ?> <?php echo get_the_date(); ?> <?php _e('by', 'mybasictheme'); ?> <?php the_author_posts_link(); ?> <?php _e('in', 'mybasictheme'); ?> <?php the_category(', '); ?>
-            </small>
+         <div class="card-footer">
+            <small class="text-muted"><?php _e('Post Created: ', 'mybasictheme'); ?> <?php echo get_the_date(); ?> <?php _e('by', 'mybasictheme'); ?> <?php the_author_posts_link(); ?></small>
         </div><!-- /.card-footer -->
     </article>
 </div>

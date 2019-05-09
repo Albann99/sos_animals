@@ -3,8 +3,8 @@
  */
 
 #wrapper-usps {
-	background-color: $secondary;
 	text-align: center;
+	background-size:cover;
 
 	.col-md {
 		display: flex;
@@ -20,6 +20,10 @@
 
 			h1 {
 				font-size: 1.5rem;
+			}
+
+			p {
+				font-family:cursive;
 			}
 		}
 

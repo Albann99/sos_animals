@@ -6,8 +6,12 @@
 	color: $white;
 	text-align: center;
 
+	h1 {
+		color:black;
+	
 	.wrapper-dog {
 		display: flex;
+
 
 		.dog {
 			background-color: $light;
@@ -32,6 +36,10 @@
 			main {
 				flex-grow: 1;
 			}
+
+			p {
+				font-family:cursive;
+			}
 			.btn {
 				background-color:blue;
 			}
@@ -41,24 +49,21 @@
 }
 
 /** Single Dog styles */
-.single-us_portfolio {
-	article {
-		img {
-			margin-bottom: 1.5rem;
+article { 
+img {
+	margin-bottom: 50px;
+	}
+	.entry-content {
+		p {
+			font-family:cursive;
 		}
 	}
+}
 
-	aside {
-		> div {
-			background-color: $dark;
-			color: $white;
-			padding: 0.75rem 1.25rem;
-			margin-bottom: 1.5rem;
-
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-
-		}
-	}
+aside {
+	.dog-info {
+	background-color:black;
+	color:white;
+	padding:20px;
+ }
 }

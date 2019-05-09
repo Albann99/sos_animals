@@ -18,8 +18,10 @@ $usps = new WP_Query([
 // Did we get any USPs?
 if ($usps->have_posts()) {
 	// GREAT SUCCESS!
+
+	$bg_img = get_field('usps_background_image');
 	?>
-		<div class="wrapper" id="wrapper-usps">
+		<div class="wrapper" id="wrapper-usps" style="background-image: url(<?php echo $bg_img; ?>);">
 			<div class="container">
 				<div class="row">
 					<!-- Loop over the USPs -->

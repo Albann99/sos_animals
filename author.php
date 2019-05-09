@@ -13,6 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
+
+$dogs = new WP_Query([
+	'post_type' => 'animal_dogs',
+	'posts_per_page' => 3,
+	'orderby' => 'title',
+	'order' => 'ASC',
+]);
 ?>
 
 <div class="wrapper" id="author-wrapper">
@@ -65,8 +72,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<ul>
 
 					<!-- The Loop -->
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+					<?php if ( $dogs->have_posts() ) : ?>
+						<?php while ( $dogs->have_posts() ) : $dogs->the_post(); ?>
 							<li>
 								<?php
 								printf(
@@ -77,8 +84,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 								);
 								?>
 								<?php understrap_posted_on(); ?> 
-								<?php esc_html_e( 'in', 'understrap' ); ?> 
-								<?php the_category( '&' ); ?>
 							</li>
 						<?php endwhile; ?>
 

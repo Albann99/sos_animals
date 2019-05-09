@@ -5,11 +5,11 @@ get_header();
 if ( have_posts() ) :
   ?>
     <div class="container">
-      <h2><?php echo get_the_archive_title(); ?></h2>
+      <h2><?php _e('Storlek:', 'understrap'); ?> <?php single_term_title(); ?></h2>
       <div class="row">
         <?php
         while ( have_posts() ) : the_post(); ?>
-          <article class="dog col-lg-4 col-md-5" style="margin-bottom: 10px;">
+          <article class="dog col-lg-4 col-md-5" style="padding-bottom: 10px;">
             <em><p class="post-meta"><?php the_time( 'F jS, Y' ); ?> | <a
                 href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a>
               |

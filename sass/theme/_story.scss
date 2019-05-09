@@ -1,9 +1,9 @@
 /**
- * USP styles
+ * Story styles
  */
 
 #wrapper-story {
-	background-color: $secondary;
+	background-size:cover;
 	text-align: center;
 
 	.col-md {
@@ -14,6 +14,10 @@
 
 			h1 {
 				font-size: 1.5rem;
+			}
+
+			p {
+				font-family: cursive;
 			}
 		}
 

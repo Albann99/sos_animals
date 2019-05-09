@@ -9,28 +9,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-// Get the three latest Portfolio Items
+// Get the three latest Dog Posts
 $dogs = new WP_Query([
 	'post_type' => 'animal_dogs',
 	'posts_per_page' => 3,
+	'orderby' => 'title',
+	'order' => 'ASC',
 ]);
 
-// Did we get any Portfolio Items?
+// Did we get any Dog Posts?
 if ($dogs->have_posts()) {
 	// GREAT SUCCESS!
 	?>
 		<div class="wrapper" id="wrapper-dogs">
 			<div class="container">
 
-				<h1 style="color:black;"><?php the_field('latest_dog_title'); ?></h1>
+				<h1><?php the_field('latest_dog_title'); ?></h1>
 
 				<div class="row">
-					<!-- Loop over the Portfolio Items -->
+					<!-- Loop over the Dog Posts -->
 					<?php
 						while ($dogs->have_posts()) {
 							$dogs->the_post();
 							?>
-								<!-- For each Portfolio Item, include a template part? -->
+								<!-- For each Dog post, include a template part? -->
 								<?php get_template_part('loop-templates/content-animal_dogs'); ?>
 							<?php
 						}
@@ -40,7 +42,7 @@ if ($dogs->have_posts()) {
 					?>
 				</div><!-- /.row -->
 			</div><!-- /.container -->
-		</div><!-- /#wrapper-portfolio-items -->
+		</div><!-- /#wrapper-dog -->
 	<?php
 }
 
