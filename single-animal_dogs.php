@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<aside class="col-md-3">
 				<div class="dog-info">
 
-					<h2>Dog info</h2>
+					<h2><?php _e('Dog info', 'understrap'); ?></h2>
 					<br>
 
 					<?php if(get_field('animal_storlek')): ?>

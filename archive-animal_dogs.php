@@ -25,7 +25,7 @@ if ( have_posts() ) :
             <?php the_excerpt() ?>
             
             <?php if(get_field('kon')): ?>
-              <p><?php _e('Kön:'); ?> <?php the_field('kon'); ?></p>
+              <p><?php _e('Kön:', 'understrap'); ?> <?php the_field('kon'); ?></p>
             <?php endif; ?>
           </article>
         <?php endwhile; ?>
