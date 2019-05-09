@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying a single Portfolio post.
+ * The template for displaying a single Dog post.
  *
  * @package understrap
  */

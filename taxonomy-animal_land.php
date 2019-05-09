@@ -5,7 +5,7 @@ get_header();
 if ( have_posts() ) :
   ?>
     <div class="container">
-      <h2><?php _e('Storlek:', 'understrap'); ?> <?php single_term_title(); ?></h2>
+      <h2><?php _e('Finns i:', 'understrap'); ?> <?php single_term_title(); ?></h2>
       <div class="row">
         <?php
         while ( have_posts() ) : the_post(); ?>

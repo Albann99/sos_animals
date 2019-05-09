@@ -27,6 +27,11 @@ if ( have_posts() ) :
             <?php if(get_field('kon')): ?>
               <p><?php _e('Kön:', 'understrap'); ?> <?php the_field('kon'); ?></p>
             <?php endif; ?>
+
+            <!-- Pagination -->
+            <?php understrap_pagination(); ?>
+            <!-- ./Pagination -->
+            
           </article>
         <?php endwhile; ?>
       </div>
@@ -34,7 +39,7 @@ if ( have_posts() ) :
  <?php
 else :
   
-  echo _e('<div class="container">', 'There are no posts', 'understrap', '</div>');
+  echo '<div class="container">', _e('There are no posts', 'understrap'), '</div>';
  
 endif;
  
