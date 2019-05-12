@@ -35,9 +35,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<h2><?php _e('Dog info', 'understrap'); ?></h2>
 					<br>
 
-					<?php if(get_field('animal_storlek')): ?>
 						<p><?php _e('Storlek:', 'understrap'); ?> <?php $storlek = get_the_term_list( $post->ID, 'animal_storlek'); echo strip_tags($storlek); ?> cm </p>
-					<?php endif; ?>
+					
 
 					<?php if(get_field('alder')): ?>
 					<p><?php _e('Ålder:', 'understrap'); ?> <?php the_field('alder'); ?></p>
