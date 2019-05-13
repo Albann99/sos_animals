@@ -35,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<h2><?php _e('Dog info', 'understrap'); ?></h2>
 					<br>
 
-						<p><?php _e('Storlek:', 'understrap'); ?> <?php $storlek = get_the_term_list( $post->ID, 'animal_storlek'); echo strip_tags($storlek); ?> cm </p>
+						<p><?php _e('Storlek:', 'understrap'); ?> <?php echo get_the_term_list( $post->ID, 'animal_storlek'); ?> cm </p>
 					
 
 					<?php if(get_field('alder')): ?>
@@ -54,7 +54,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<p><?php _e('Vikt:', 'understrap'); ?> <?php the_field('vikt'); ?> kg </p>
 					<?php endif; ?>
 
-					<p><?php _e('Finns i:', 'understrap'); ?> <?php $land = get_the_term_list( $post->ID, 'animal_land'); echo strip_tags($land); ?></p>
+					<p><?php _e('Finns i:', 'understrap'); ?> <?php echo get_the_term_list( $post->ID, 'animal_land'); ?> </p>
 
 					<?php if(get_field('adopterad')): ?>
 					<p><?php _e('Adopterad:', 'understrap'); ?> <?php the_field('adopterad'); ?></p>
